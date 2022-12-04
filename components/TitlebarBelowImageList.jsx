@@ -23,19 +23,6 @@ export default function TitlebarBelowImageList() {
         {itemData.map((item) => (
           <Card key={item.id}>
             <ImageListItem sx={{ height: "100% !important" }}>
-              <ImageListItemBar
-                sx={{
-                  background:
-                    "linear-gradient(to bottom, rgba(0,0,0,0.7)0%, rgba(0,0,0,0.3)70%, rgba(0,0,0,0)100%)",
-                }}
-                title={item.title === 0 ? "Free Stay" : "$" + item.title}
-                actionIcon={
-                  <Tooltip title={item.author} sx={{ mr: "5px" }}>
-                    <Avatar src={item.author} />
-                  </Tooltip>
-                }
-                position="top"
-              />
               <img
                 src={item.img}
                 alt={item.title}
@@ -43,18 +30,8 @@ export default function TitlebarBelowImageList() {
                 style={{ cursor: "pointer" }}
               />
               <ImageListItemBar
-                title={item.author}
-                actionIcon={
-                  <Rating
-                    sx={{ color: "rgba(255,255,255, 0.8)", mr: "5px" }}
-                    name="room-rating"
-                    defaultValue={3.5}
-                    precision={0.5}
-                    emptyIcon={
-                      <StarBorder sx={{ color: "rgba(255,255,255, 0.8)" }} />
-                    }
-                  />
-                }
+                title={item.title}
+                subtitle={item.author}
               />
             </ImageListItem>
           </Card>
