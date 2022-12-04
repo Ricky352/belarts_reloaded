@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/styles.css";
 
 import { ThemeProvider } from "@mui/material/styles";
 import { purple, red } from "@mui/material/colors";

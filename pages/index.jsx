@@ -1,12 +1,19 @@
-import { AppBar, Toolbar } from '@mui/material'
-import ResponsiveAppBar from '../components/ResponsiveAppBar'
-import TitlebarBelowImageList from '../components/TitlebarBelowImageList'
+import { ImageList, Typography } from "@mui/material";
+import { Container } from "@mui/system";
+
+import Header from "../components/Header";
+import ImageSlider from "../components/ImageSlider";
 
 export default function Home() {
   return (
     <>
-      <ResponsiveAppBar />
-      <TitlebarBelowImageList />
+      <Header />
+      <Typography align="center" mt={4} variant="h3">
+        BelArts
+      </Typography>
+      <Container>
+        <ImageSlider />
+      </Container>
     </>
-  )
+  );
 }
